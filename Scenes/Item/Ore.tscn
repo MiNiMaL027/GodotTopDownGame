@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/Ore.cs" type="Script" id=2]
+
+[node name="Item" type="Area2D"]
+scale = Vector2( 0.8, 0.8 )
+collision_layer = 4
+collision_mask = 15
+script = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2( 0, -1 )
+polygon = PoolVector2Array( 6, 0, 6, -2, 2, -2, 2, -6, -8, -6, -8, 6, 8, 6, 8, 0 )
+
+[node name="OreSprite" type="Sprite" parent="."]
+position = Vector2( 0, -1 )
